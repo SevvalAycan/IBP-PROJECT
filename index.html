@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest</title>
+    <link rel="icon" type="image/png" href="images/pinterest-logo-png-transparent-background-2.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <style>
+      
+      .search-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-top: 20px;
+      }
+
+      .search-box input {
+        margin-right: 10px;
+        width: 400px;
+        /* Genişlik değerini istediğiniz değere ayarlayabilirsiniz */
+        padding: 10px;
+        /* İç ve dış boşlukları ayarlayabilirsiniz */
+        border: none;
+        /* Kenarlık olmadan görüntüler */
+        border-radius: 20px;
+        /* Kenarları kavisli yapar */
+        background-color: rgb(206, 195, 195);
+      }
+
+      .search-box i {
+        cursor: pointer;
+        /* Fare imlecini el işareti yapar */
+      }
+
+      .bildirim-sekmesi {
+        position: relative;
+        top: 0;
+        left: 1300px;
+        display: inline-block;
+      }
+      .mesaj-sekmesi
+      {
+        position: relative;
+        top: 0;
+        left: 1310px;
+        display: inline-block;
+      } 
+
+      
+    </style>
+  </head>
+  <body>
+    <img src="images/pinterest-logo-png-transparent-background-2.png" width="40" height="40" alt="Web site logo" style="cursor: pointer;"/>
+    <a.href="anasayfa.html" id="anasayfaButton" class="anasayfa" style="cursor:pointer  background">Anasayfa</a.href>
+      <script>
+        document.getElementById("anasayfaButton").addEventListener("click", function() {
+          window.location.href = "company/anasayfa.html";
+        });
+      </script>
+      <a.href="oluştur.html" id="oluşturButton" class="oluştur"> Oluştur</a.href>
+        <script>
+          document.getElementById("oluşturButton").addEventListener("click", function() {
+            window.location.href = "oluşturButton.html";
+          });
+        </script>
+        <form>
+          <div id="box" class="search-box">
+            <input type="text" id="search" placeholder="Search">
+            <i class=" fa fa-search"></i>
+          </div>
+        </form>
+        <div class="bildirim-sekmesi">
+          <img src="images/png-transparent-bell-notification-communication-information-icon-thumbnail.png" width="40" height="40">
+        </div>
+        <div class="mesaj-sekmesi">
+            <img src="images/message.png" width="40" height="40">         
+        </div>
+  </body>
+</html>
