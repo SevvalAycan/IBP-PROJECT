@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest</title>
+    <link rel="icon" type="image/png" href="images/pinterest-logo-png-transparent-background-2.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <style>
+      
+      .logo
+      {
+
+        display: flex;
+        position: fixed;
+        top: 0;
+        margin-top: 20px;
+
+      }
+
+      .anasayfa
+      {
+        display:flex;
+        position: fixed;  
+        text-align: center; 
+        margin-top: 20px;  
+        top: 0;
+        left: 60px;  
+        padding: 5px 8px; 
+        height: 30px;
+        width: 60px;;     
+        background-color: black ;
+        color: white;
+        font-size: 14px;        
+        border:none;
+        border-radius: 20px;
+        
+        cursor: pointers;
+        
+      }
+
+      .oluştur
+      {
+
+        display:flex;
+        position: fixed;  
+        text-align: center;  
+        margin-top:20px ;  
+        top: 0;
+        left: 150px;  
+        padding: 5px 8px; 
+        height: 30px;
+        width: 50px;            
+        background-color:rgb(234, 229, 229) ;
+        color: black;
+        font-size: 14px;        
+        border:none;
+        border-radius: 20px;
+        cursor: pointers;
+      }
+      
+      .search-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-top: 20px;
+        cursor: pointer;
+        
+      }
+
+      .search-box input {
+        margin-right: 10px;
+        width: 400px;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        background-color: rgb(234, 229, 229);
+      }
+
+    
+
+      .bildirim-sekmesi {
+        display: flex;
+        position: relative;
+        top: 0;
+        left: 1125px;
+        
+      }
+      .mesaj-sekmesi
+      {
+        display: flex;
+        position: relative;
+        top: 0;
+        left: 1135px;
+      } 
+
+      
+    </style>
+  </head>
+  <body>
+    <img src="images/pinterest-logo-png-transparent-background-2.png" width="40" height="40" alt="Web site logo" id="logo" style="cursor: pointer;" class="logo"/>
+
+    <script>
+      document.getElementById("logo").addEventListener("click", function() {
+        window.location.href = "company/anasayfa.html";
+      });
+    </script>
+    
+    
+    <a.href="anasayfa.html" id="anasayfa" class="anasayfa">Ana Sayfa</a.href>
+
+      <script>
+       document.getElementById("anasayfa").addEventListener("click", function() {
+        window.location.href = "company/anasayfa.html";
+      });
+      var buton = document.getElementById('anasayfa'); 
+
+      buton.addEventListener('click', function() {
+      buton.style.backgroundColor = 'black'; 
+      buton.style.color = 'white';
+      });
+      </script>
+
+    <a.href="oluştur.html" id="oluşturButton" class="oluştur"> Oluştur</a.href>
+
+        <script>
+          document.getElementById("oluşturButton").addEventListener("click", function() {
+            window.location.href = "oluşturButton.html";
+          });
+        </script>
+
+    <form>
+          <div id="box" class="search-box">
+            <input type="text" id="search" placeholder="Search">
+            <i class=" fa fa-search"></i>
+          </div>
+    </form>
+
+    <div class="bildirim-sekmesi">
+
+       <img src="images/png-transparent-bell-notification-communication-information-icon-thumbnail.png" width="30" height="30">
+
+     </div>
+
+        <div class="mesaj-sekmesi">
+
+            <img src="images/message.png" width="30" height="30">   
+                  
+        </div>
+  </body>
+</html>
