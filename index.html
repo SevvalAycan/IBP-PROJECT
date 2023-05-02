@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinterest</title>
-    <link rel="icon" type="image/png" href="images/pinterest-logo-png-transparent-background-2.png">
+    <title>Sakura</title>
+    <link rel="icon" type="image/png" href="images/sakuraICON.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <head>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+      <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    </head>
+    
     <style>
+
+       nav h2{
+         
+        color:rgb(69, 61, 63) ;
+        position: absolute;
+
+      }
+
+       
+       body{
+        background-color: rgb(223, 205, 215);
+       }
+
+       .header img, .header button, .header blog, .header discover, .header.create{ 
+        display:inline-block;
+        vertical-align: middle;
+       }
       
       .logo
       {
@@ -15,140 +38,198 @@
         display: flex;
         position: fixed;
         top: 0;
+        left: 10px;
         margin-top: 20px;
 
       }
 
-      .anasayfa
-      {
-        display:flex;
-        position: fixed;  
-        text-align: center; 
-        margin-top: 20px;  
-        top: 0;
-        left: 60px;  
-        padding: 5px 8px; 
-        height: 30px;
-        width: 60px;;     
-        background-color:rgb(234, 229, 229) ;
-        font-size: 14px;        
-        border:none;
-        border-radius: 20px;
+      .login{
         
-        cursor: pointers;
-        
-      }
-
-      .oluştur
-      {
-
-        display:flex;
-        position: fixed;  
-        text-align: center;  
-        margin-top:20px ;  
-        top: 0;
-        left: 150px;  
-        padding: 5px 8px; 
-        height: 30px;
-        width: 50px;            
-        background-color:rgb(234, 229, 229) ;
-        font-size: 14px;        
+        background: none;
         border:none;
-        border-radius: 20px;
-        cursor: pointers;
-      }
-      
-      .search-box {
+        box-shadow: none;
+        color: rgb(69, 61, 63);
+        font-weight:bold;
+        font-size: medium;
         display: flex;
-        align-items: center;
-        justify-content: center;
         position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        margin-top: 20px;
-        cursor: pointer;
-        
+        top: 38px;
+        left:260px;
+       
       }
 
-      .search-box input {
-        margin-right: 10px;
-        width: 400px;
-        padding: 10px;
-        border: none;
-        border-radius: 20px;
-        background-color: rgb(234, 229, 229);
-      }
+      .blog{
 
-    
-
-      .bildirim-sekmesi {
+        background: none;
+        border:none;
+        box-shadow: none;
+        color: rgb(69, 61, 63);
+        font-weight:bold;
+        font-size: medium;
         display: flex;
-        position: relative;
-        top: 0;
-        left: 1125px;
-        
+        position: fixed;
+        top:38px;
+        left: 70px;
       }
-      .mesaj-sekmesi
-      {
-        display: flex;
-        position: relative;
-        top: 0;
-        left: 1135px;
-      } 
 
+      .discover{
+        background: none;
+        border:none;
+        box-shadow: none;
+        color: rgb(69, 61, 63);
+        font-weight:bold;
+        font-size: medium;
+        display: flex;
+        position: fixed;
+        top:38px;
+        left: 120px;
+
+      }
       
+      .create{
+        
+        background: none;
+        border:none;
+        box-shadow: none;
+        color: rgb(69, 61, 63);
+        font-weight:bold;
+        font-size: medium;
+        display: flex;
+        position: fixed;
+        top:38px;
+        left: 200px;
+      }
+
+      .login:hover , .logo:hover , .blog:hover , .discover:hover, .create:hover{
+
+        opacity:0.8;
+      
+      }
+
+      #slideshow{
+        position:relative;
+        height:600px;
+        width:400px;
+        margin:0 auto;
+      }
+
+      #slideshow img{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        opacity: 0;
+        z-index: 1;
+      }
+
+      #slideshow img.active{
+
+        opacity:1;
+        z-index: 2;
+        transition: opacity 1s;
+      }
+
+      .container{
+        display:flex;
+      }
+
+      .slidebar{
+        width:200px;
+        background-color: azure;
+        padding:20px;
+      }
+
+      .content{
+        color:rgb(69, 61, 63);
+        flex:1;
+        padding: 2px;
+        float: right;
+      }
+
+      .sidebar ul{
+        list-style-type: none;
+        margin:0;
+        padding:0;
+      }
+
+      .sidebar li a{
+
+        display: block;
+        padding: 10px;
+        background-color:rgb(130, 99, 104);
+        color: rgb(251, 251, 251);
+        text-decoration: 5px;
+        margin-bottom: 5px;
+
+      }
+
+      .sidebar li a:hover {
+      background-color: #555;
+      color: #cb8c8c;
+      }
+
+
+
     </style>
   </head>
   <body>
-    <img src="images/pinterest-logo-png-transparent-background-2.png" width="40" height="40" alt="Web site logo" id="logo" style="cursor: pointer;" class="logo"/>
 
-    <script>
-      document.getElementById("logo").addEventListener("click", function() {
-        window.location.href = "company/anasayfa.html";
-      });
-    </script>
-    
-    
-    <a.href="anasayfa.html" id="anasayfa" class="anasayfa">Ana Sayfa</a.href>
+    <div class="header">
+
+      <img src="images/sakuraICON.png" width="50" height="50" alt="Web site logo" id="logo" style="cursor: pointer;" class="logo"/>
+      <button class="blog">Blog</button>
+      <button class="discover">Discover</button>
+      <button class="create">Create</button>
+      <button class="login">Log in</button>
+      
+    </div>
+
+    <div id="slideshow" style="margin-top: 100px;">
+      <img src="images/WhatsApp Görsel 2023-05-02 saat 19.35.44.jpg">
+      <img src="images/WhatsApp Görsel 2023-05-02 saat 19.35.4.jpg">
+      <img src="images/WhatsApp Görsel 2023-05-02 saat 19.35.45.jpg">
+      <img src="images/5.jpg">
+      <img src="images/54.jpg">
+      <img src="images/5465.jpg">
+      <img src="images/4.jpg">
+      <img src="images/5979.jpg">
 
       <script>
-       document.getElementById("anasayfa").addEventListener("click", function() {
-        window.location.href = "company/anasayfa.html";
-      });
-      var buton = document.getElementById('anasayfa'); 
 
-      buton.addEventListener('click', function() {
-      buton.style.backgroundColor = 'black'; 
-      buton.style.color = 'white';
-      });
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+        var i;
+        var slides = document.querySelectorAll("#slideshow img");
+        for (i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].classList.add("active");
+          setTimeout(showSlides, 3000);
+        }
+
       </script>
 
-    <a.href="oluştur.html" id="oluşturButton" class="oluştur"> Oluştur</a.href>
-
-        <script>
-          document.getElementById("oluşturButton").addEventListener("click", function() {
-            window.location.href = "oluşturButton.html";
-          });
-        </script>
-
-    <form>
-          <div id="box" class="search-box">
-            <input type="text" id="search" placeholder="Search">
-            <i class=" fa fa-search"></i>
-          </div>
-    </form>
-
-    <div class="bildirim-sekmesi">
-
-       <img src="images/png-transparent-bell-notification-communication-information-icon-thumbnail.png" width="30" height="30">
-
-     </div>
-
-        <div class="mesaj-sekmesi">
-
-            <img src="images/message.png" width="30" height="30">   
-                  
-        </div>
+    </div>
+    
+    <div class="container">
+      <div class="sidebar">
+        <ul>
+          <li><a href="#">Architecture</a></li>
+          <li><a href="#">Food</a></li>
+          <li><a href="#">Flowers</a></li>
+          <li><a href="#">Fashion</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="#">View/Sunset/Ocean</a></li>
+        </ul>
+      </div>
+      <div class="content">
+      </div>
+    </div>      
+    
   </body>
 </html>
